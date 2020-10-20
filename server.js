@@ -13,12 +13,12 @@ app.get('/', (req, res) => {
 
 app.set('view engine', 'ejs')
 
-/*app.post('/show', (req, res) => {
-    console.log(req.body.name)
-})*/
-
-app.post('\show', function(req, res){
+app.post('/show', (req, res) => {
     console.log(req.body)
 })
+
+/*app.post('\show', function(req, res){
+    console.log(req.body)
+})*/
 
 app.use (bodyParser.urlencoded({extended: true}))
