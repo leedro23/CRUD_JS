@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
-
+app.use (bodyParser.urlencoded({extended: true}))
 
 app.listen(3000, function (){
     console.log('Server funcionando na porta 3000')
@@ -21,4 +21,3 @@ app.post('/show', (req, res) => {
     console.log(req.body)
 })*/
 
-app.use (bodyParser.urlencoded({extended: true}))
